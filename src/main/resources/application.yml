@@ -1,0 +1,25 @@
+server:
+  port: ${portRiesgoSinUmf}
+
+spring:
+  data:
+    mongodb:
+      authentication-database: ${authenticationdatabaseMongo}
+      username: ${usrMongoCifras}
+      password: ${pwMongoCifras}
+      database: ${databaseMongo}
+      port: ${portMongo}
+      host: ${hostMongo}
+  batch:
+    job:
+      enabled: false
+  application:
+    name: btpmc-riesgosinumf
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+logging:
+  file: ${fileLogRiesgoSinUmf}
+  level:
+    root: INFO
+    org.springframework.web: INFO
+    com.demo: INFO
